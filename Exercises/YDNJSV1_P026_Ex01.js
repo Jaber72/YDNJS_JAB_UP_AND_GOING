@@ -25,7 +25,7 @@ return totalCost*.05
 var i = 0;
 var costs = [300, 20, 250, 15, 300, 40, 1000, 20];
 var totalCost = 0.0;
-success = true;
+var success = true;
 
 while( balance > MIN_BALANCE_TOLERATED && i < costs.length ) {
   // var cost = getCost();
