@@ -25,11 +25,17 @@ return totalCost*.05
 var i = 0;
 var costs = [300, 20, 250, 15, 300, 40, 1000, 20];
 var totalCost = 0.0;
+success = true;
+
 while( balance > MIN_BALANCE_TOLERATED && i < costs.length ) {
   // var cost = getCost();
-    purchase(costs[i]);
+    success = purchase(costs[i]);
     console.log( "Cost " + costs[i] + " \n In Loop Balance remaining: " + balance + "\n" );
-    totalCost = totalCost + costs[i];
+    if (success) {
+      totalCost = totalCost + costs[i];
+    } else {
+      break;
+    }
     console.log( "Cost " + costs[i] + " \n In Loop Total Costs: " + totalCost + "\n" );
   i++;
   }
