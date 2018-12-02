@@ -11,6 +11,8 @@ var success = true;
 function getCost() {
 
   // How do I get input from the keyboard in node?
+  // For now I will paste the entire program into Chrome's Console
+  return prompt( "Enter Cost of Item" );
  }
 
 function purchase(cost) {
@@ -33,16 +35,17 @@ function formatMoney(amount) {
   return formattedAmount;
 }
 
-while( balance > MIN_BALANCE_TOLERATED && i < costs.length ) {
-  // var cost = getCost();
-    success = purchase(costs[i]);
-    console.log( "Cost " + costs[i] + " \n In Loop Balance remaining: " + balance + "\n" );
+// while( balance > MIN_BALANCE_TOLERATED && i < costs.length ) {
+while( balance > MIN_BALANCE_TOLERATED ) {
+    var cost = getCost();
+    success = purchase(cost);
+    console.log( "Cost " + cost + " \n In Loop Balance remaining: " + balance + "\n" );
     if (success) {
-      totalCost = totalCost + costs[i];
+      totalCost = totalCost + cost;
     } else {
       break;
     }
-    console.log( "Cost " + costs[i] + " \n In Loop Total Costs: " + totalCost + "\n" );
+    // console.log( "Cost " + costs[i] + " \n In Loop Total Costs: " + totalCost + "\n" );
   i++;
   }
 
