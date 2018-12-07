@@ -10,3 +10,13 @@ console.log(bar.b);
 console.log(bar.a);
 console.log(foo);
 console.log(bar);  
+
+/* 
+output of this program:
+
+Hello World
+42
+{ a: 42 }
+{ b: 'Hello World' }
+
+*/
